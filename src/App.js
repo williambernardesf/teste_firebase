@@ -35,6 +35,7 @@ function App() {
   }, []);
 
 
+  //cadastro das variáveis
   async function handleAdd(){
     
     await firebase.firestore().collection('posts')
@@ -53,7 +54,7 @@ function App() {
 
   }
 
-
+  //busca os dados do banco
   async function buscaPost(){
     //  await firebase.firestore().collection('posts')
     //  .doc('123')
@@ -91,6 +92,7 @@ function App() {
 
   }
 
+  //faz a edição dos dados do banco
   async function editarPost(){
     await firebase.firestore().collection('posts')
     .doc(idPost)
@@ -113,6 +115,7 @@ function App() {
 
 
   return (
+    //html
     <div>
       <h1>ReactJS + Firebase :)</h1> <br/>
 
